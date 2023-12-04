@@ -77,7 +77,7 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.item{
+.product{
   padding-bottom: 5%;
   /* margin:10px; */
   /* border-radius: 25px; */
@@ -94,6 +94,7 @@
 
 /* store styles ends here */
 /* trend style starts here */
+
 .reportcover{
   width: 300;
   height: 600;
@@ -103,8 +104,56 @@
   width: 1200px;
   height: 700px;
 }
-/* trend style endss here */
+#trendreport{
+  background-color: rgb(173, 173, 175);
+  text-align: center;
+  padding-bottom: 2%; 
+}
+.center1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure that the container takes the full height */
+}
+#carouselExampleCaptions .carousel-indicators button {
+  background-color: black; }
+
+#carouselExampleCaptions .carousel-control-prev-icon,
+#carouselExampleCaptions .carousel-control-next-icon {
+  fill: black
+}
+.visually-hidden{
+  color: black;
+}
+
+/* trend style ends here */
 /* Login style starts here */
+
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.discount {
+ padding-top: 0%;
+  display: flex;
+    padding-left: 20%;
+}
+@keyframes diagonalShake {
+  0%, 100% {
+      transform: translate(0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+      transform: translate(-10px, -10px);
+  }
+  20%, 40%, 60%, 80% {
+      transform: translate(10px, 10px);
+  }
+}
+
+.shaking-image {
+  animation: diagonalShake 3s infinite; /* Adjust duration as needed */
+}
 #login{
   min-height: 700px;
   padding-top: 5%;
@@ -173,6 +222,11 @@ text-align: center;
     background-color:whitesmoke;
     text-align: center;
     bottom: auto;
+    list-style-type: none;
+}
+
+.footerbody ul{
+  list-style-type: none;
 }
 /*Social Media Style Starts*/
 #socialmedia{

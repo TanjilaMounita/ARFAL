@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -27,7 +29,7 @@
           <div><img src="images/loging logo.png" alt="login" id="logoimg" title="Login"></div>
           <div><a href="login.html" class="linksanchor">Login</a></div>
           <div><img src="images/shopping logo.png" alt="shopping" id="logoimg" title="Cart"></div>
-          <div><a href="shopping cart.html" class="linksanchor">Shopping cart</a></div>
+          <div><a href="shoppingcart.html" class="linksanchor">Shopping cart</a></div>
         </div>
       </div>
     <!--Navigation Bar Ends here-->
@@ -40,66 +42,120 @@
     <!-- Content of the page starts here -->
     <!-- <hr class="hr1"> -->
     <div id="store">
-      <div class="item">
-          <img src="images/item1.png" alt="" class="itemimage">
-          <button>Add to Cart</button>
+      <div class="product" data-id="1" data-name="Icatu checked blazer" data-price="249.95">
+       <img src="images/item1.png" alt="" class="itemimage">
+          <h3>Icatu checked blazer</h3>
+        <p>Price: €249.95 (incl. VAT) </p>
+          <button onclick="addToCart(1)">Add to Cart</button>
       </div>
-      <div class="item">
+      <div class="product" data-id="2" data-name="Catimor checked Lyocell wide pants" data-price="149.95">
           <img src="images/item6.png" alt="" class="itemimage">
-          <button>Add to Cart</button>
-      </div>
+          <h3>Catimor checked Lyocell wide pants </h3>
+          <p>Price: €149.95 (incl. VAT) </p>
+          <button onclick="addToCart(2)">Add to Cart</button>
+        </div>
       </div>
       <div id="store">
-        <div class="item">
+        <div class="product" data-id="3" data-name="Robusta suit" data-price="549.95">
             <img src="images/item2.png" alt="" class="itemimage">
-            <button>Add to Cart</button>
+            <h3>Robusta suit </h3>
+            <p> Price: €549.95 (incl. VAT) </p>
+            <button onclick="addToCart(3)">Add to Cart</button>
         </div>
-        <div class="item">
+        <div class="product" data-id="4" data-name="Mocha twill pants" data-price="99.95">
             <img src="images/item3.png" alt="" class="itemimage">
-            <button>Add to Cart</button>
+            <h3>Mocha twill pants</h3>
+            <p>Price: €99.95 (incl. VAT) </p>
+            <button onclick="addToCart(4)">Add to Cart</button>
         </div>
         </div>
         <div id="store">
-          <div class="item">
+          <div class="product" data-id="5" data-name="Arabesca blazer" data-price="299.95">
               <img src="images/item5.png" alt="" class="itemimage">
-              <button>Add to Cart</button>
+              <h3>Arabesca blazer</h3>
+              <p>Price: €299.95 (incl. VAT) </p>
+              <button onclick="addToCart(5)">Add to Cart</button>
           </div>
-          <div class="item">
+          <div class="product" data-id="6" data-name="Liberica pants" data-price="109.95">
               <img src="images/item7.png" alt="" class="itemimage">
-              <button>Add to Cart</button>
+              <h3>Liberica pants</h3>
+            <p>Price: €109.95 (incl. VAT) </p>
+              <button onclick="addToCart(6)">Add to Cart</button>
           </div>
           </div>
           <div id="store">
-            <div class="item">
-                <img src="images/item9.png" alt="" class="itemimage">
-                <button>Add to Cart</button>
-            </div>
-            <div class="item">
+            <div class="product" data-id="7" data-name="Pacamara jumpsuit" data-price="649.95">
+              <img src="images/item9.png" alt="" class="itemimage">
+              <h3>Pacamara jumpsuit</h3>
+          <p>Price: €649.95 (incl. VAT) </p>
+              <button onclick="addToCart(7)">Add to Cart</button>
+          </div>
+            <div class="product" data-id="8" data-name="Geisha knitted coat" data-price="999.95">
                 <img src="images/item10.png" alt="" class="itemimage">
-                <button>Add to Cart</button>
+                <h3>Geisha knitted coat</h3>
+            <p>Price: €999.95 (incl. VAT) </p>
+                <button onclick="addToCart(8)">Add to Cart</button>
             </div>
             </div>
             <div id="store">
-              <div class="item">
+              <div class="product" data-id="9" data-name="Kent shirt" data-price="69.95">
                   <img src="images/item11.png" alt="" class="itemimage">
-                  <button>Add to Cart</button>
+                  <h3>Kent shirt</h3>
+            <p>Price: €69.95 (incl. VAT) </p>
+                  <button onclick="addToCart(9)">Add to Cart</button>
               </div>
-              <div class="item">
+              <div class="product" data-id="10" data-name="Bourbon twill pants" data-price="139.95">
                   <img src="images/item12.png" alt="" class="itemimage">
-                  <button>Add to Cart</button>
+                  <h3>Bourbon twill pants</h3>
+            <p>Price: €139.95 (incl. VAT) </p>
+                  <button onclick="addToCart(10)">Add to Cart</button>
               </div>
               </div>
               <div id="store">
-                <div class="item">
+                <div class="product" data-id="11" data-name="Ruiru suit" data-price="799.95">
                     <img src="images/item4.png" alt="" class="itemimage">
-                    <button>Add to Cart</button>
+                    <h3>Ruiru suit</h3>
+            <p>Price: €799.95 (incl. VAT) </p>
+                    <button onclick="addToCart(11)">Add to Cart</button>
                 </div>
-                <div class="item">
+                <div class="product" data-id="12" data-name="Pacas long sleeved shirt" data-price="79.95">
                     <img src="images/item8.png" alt="" class="itemimage">
-                    <button>Add to Cart</button>
+                    <h3>Pacas long sleeved shirt</h3>
+            <p>Price: €79.95 (incl. VAT) </p>
+                    <button onclick="addToCart(12)">Add to Cart</button>
                 </div>
                 </div>
     <!-- Content of the page ends here -->
+    <script>
+      function addToCart(productId) {
+          // Assuming the cart data is stored in localStorage for simplicity
+          var cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+          // Find the product in the cart (if it already exists)
+          var existingProduct = cart.find(item => item.id === productId);
+  
+          if (existingProduct) {
+              // If the product is already in the cart, you might want to update quantity or take other actions
+              existingProduct.quantity += 1;
+          } else {
+              // If the product is not in the cart, add it
+              var product = {
+                  id: productId,
+                  name: "Product " + productId,
+                  price: 0.00, // You can fetch the actual price from the data attribute or elsewhere
+                  quantity: 1  // Assuming an initial quantity of 1
+              };
+  
+              cart.push(product);
+          }
+  
+          // Update the cart data in localStorage
+          localStorage.setItem('cart', JSON.stringify(cart));
+  
+          // Redirect to the shopping cart page
+          window.location.href = 'shoppingcart.html';
+      }
+  </script>
     <!-- <hr class="hr1"> -->
     <!-- Footer starts here -->
     <div id="footer">
