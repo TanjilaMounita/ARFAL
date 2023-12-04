@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <meta charset="UTF-8">
     <title>ARFAL Apparel for men</title>
+    <style>
+      label {
+          display: block;
+          margin-bottom: 8px;
+      }
+  </style>
 </head>
 <body>
   <!-- <hr class="hr1"> -->
@@ -27,7 +34,7 @@
           <div><img src="images/loging logo.png" alt="login" id="logoimg" title="Login"></div>
           <div><a href="login.html" class="linksanchor currentpage">Login</a></div>
           <div><img src="images/shopping logo.png" alt="shopping" id="logoimg" title="Cart"></div>
-          <div><a href="shopping cart.html" class="linksanchor">Shopping cart</a></div>
+          <div><a href="shoppingcart.html" class="linksanchor">Shopping cart</a></div>
         </div>
       </div>
     <!--Navigation Bar Ends here-->
@@ -39,17 +46,58 @@
     </div>
     <!-- Content of the page starts here -->
     <div id="login">
-         <div class="form1">
-          Sign up to receive updates from our shop and get a 10% discount.
+      <div id="container" class="shaking-image">
+            <img src="images/discount.jpg" alt="signin" class="discount" title="signin">
+        </div>
           <br> <br>
             <label for="uemail">Sign in:</label>
-            <br>
-            <input type="email" name="uemail" id="uemail" placeholder="Enter your email">
-            <button>Submit</button> 
-         </div>
-    </div>
+         <form id="registrationForm">
+  <!-- Basic input fields for registration -->
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="firstName" required>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="lastName" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+
+  <label for="confirmPassword">Confirm Password:</label>
+  <input type="password" id="confirmPassword" name="confirmPassword" required>
+<br> <br>
+  <!-- Submit button -->
+  <button type="button" onclick="validateForm()">Submit</button>
+</form>
+
+<script>
+  function validateForm() {
+      // Get form values
+      var firstName = document.getElementById('firstName').value;
+      var lastName = document.getElementById('lastName').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+
+      // Basic validation 
+      if (firstName === '' || lastName === '' || email === '' || password === '' || confirmPassword === '') {
+          alert('Please fill in all fields.');
+          return;
+      }
+
+      if (password !== confirmPassword) {
+          alert('Passwords do not match.');
+          return;
+      }
+      alert('Registration successful!');
+  }
+</script>
+</div>
+</div>
     <!-- Content of the page ends here -->
-    <!-- <hr class="hr1"> -->
+    
     <!-- Footer starts here -->
     <div id="footer">
         <div id="footerlinks">
